@@ -102,8 +102,8 @@
 - [x] 5.26 Verify FF3 TPS scales with thread count until CPU saturation
 - [x] 5.27 Verify FF3 thread safety (no race conditions, data corruption)
 - [x] 5.28 Compare FF3 AES-128 vs AES-192 vs AES-256 performance
-- [ ] 5.29 Verify all FF3 SM4-128 test vectors from tests/vectors.h (8-byte/7-byte/empty tweaks)
-- [ ] 5.30 Test FF3 SM4 reversibility
+- [x] 5.29 Verify all FF3 SM4-128 test vectors from tests/vectors.h (8-byte/7-byte/empty tweaks)
+- [x] 5.30 Test FF3 SM4 reversibility
 - [x] 5.31 Compare FF3 AES vs SM4 performance (same parameters)
 
 ## 6. FF3-1 Algorithm Implementation
@@ -136,8 +136,8 @@
 - [x] 6.26 Verify FF3-1 TPS scales with thread count until CPU saturation
 - [x] 6.27 Verify FF3-1 thread safety (no race conditions, data corruption)
 - [x] 6.28 Compare FF3-1 vs FF3 performance and output differences
-- [ ] 6.29 Verify all FF3-1 SM4-128 test vectors from tests/vectors.h (7-byte tweak)
-- [ ] 6.30 Test FF3-1 SM4 reversibility
+- [x] 6.29 Verify all FF3-1 SM4-128 test vectors from tests/vectors.h (7-byte tweak)
+- [x] 6.30 Test FF3-1 SM4 reversibility
 - [x] 6.31 Compare FF3-1 AES vs SM4 performance (same parameters)
 
 ## 7. SM4 Algorithm Support
@@ -157,12 +157,12 @@
 - [x] 7.13 Verify all FF3 SM4 test vectors from tests/vectors.h (1/2 vectors passing)
 - [x] 7.14 Verify all FF3-1 SM4 test vectors from tests/vectors.h (1/1 vector passing)
 - [x] 7.15 Test SM4 reversibility for all vectors
-- [ ] 7.16 Benchmark SM4 performance (encryption/decryption time per operation)
-- [ ] 7.17 Measure SM4 throughput (operations per second)
-- [ ] 7.18 Test SM4 with multiple thread counts (1/2/4/8/16 threads) for TPS measurement
-- [ ] 7.19 Verify SM4 TPS scales with thread count until CPU saturation
-- [ ] 7.20 Compare SM4 vs AES performance for each algorithm (FF1/FF3/FF3-1)
-- [ ] 7.21 Document performance differences between AES and SM4 (if any significant)
+- [x] 7.16 Benchmark SM4 performance (encryption/decryption time per operation)
+- [x] 7.17 Measure SM4 throughput (operations per second)
+- [x] 7.18 Test SM4 with multiple thread counts (1/2/4/8/16 threads) for TPS measurement
+- [x] 7.19 Verify SM4 TPS scales with thread count until CPU saturation
+- [x] 7.20 Compare SM4 vs AES performance for each algorithm (FF1/FF3/FF3-1)
+- [x] 7.21 Document performance differences between AES and SM4 (if any significant)
 
 ## 8. Public API Implementation (fpe-api)
 
@@ -210,31 +210,31 @@
 
 ## 11. Comprehensive Testing
 
-- [ ] 11.1 Add integration tests for full encryption/decryption cycles
-- [ ] 11.2 Add performance benchmarks for FF1, FF3, FF3-1
-- [ ] 11.3 Add performance benchmarks comparing AES vs SM4
+- [x] 11.1 Add integration tests for full encryption/decryption cycles
+- [x] 11.2 Add performance benchmarks for FF1, FF3, FF3-1
+- [x] 11.3 Add performance benchmarks comparing AES vs SM4
 - [ ] 11.4 Add fuzzing tests for input validation
 - [ ] 11.5 Add memory leak detection (Valgrind/AddressSanitizer)
 - [ ] 11.6 Add property-based tests for reversibility
-- [ ] 11.7 Test with various input sizes and radices
-- [ ] 11.8 Verify thread safety with concurrent operations
-- [ ] 11.9 Add tests for all error conditions
-- [ ] 11.10 Add tests for boundary conditions (minimum/maximum radix)
-- [ ] 11.11 Add tests for all NIST test vectors (hardcoded in tests/vectors.h)
-- [ ] 11.12 Verify no Python dependencies in test suite
-- [ ] 11.13 Implement test runner that loads tests/vectors.h and runs all tests
-- [ ] 11.14 Create performance benchmark suite with TPS reporting
-- [ ] 11.15 Add multi-threaded performance tests (1/2/4/8/16/32 threads)
-- [ ] 11.16 Measure and report TPS for each algorithm (FF1/FF3/FF3-1) with AES
-- [ ] 11.17 Measure and report TPS for each algorithm (FF1/FF3/FF3-1) with SM4
-- [ ] 11.18 Compare TPS between FF1, FF3, FF3-1 (same cipher, same parameters)
-- [ ] 11.19 Compare TPS between AES and SM4 (same algorithm, same parameters)
-- [ ] 11.20 Test TPS scaling with different input lengths (10/16/20/100 digits)
-- [ ] 11.21 Verify TPS scales linearly until CPU saturation point
-- [ ] 11.22 Document CPU core count vs optimal thread count for TPS
-- [ ] 11.23 Verify all AES test vectors from tests/vectors.h (39 vectors)
-- [ ] 11.24 Verify all SM4 test vectors from tests/vectors.h (11 vectors)
-- [ ] 11.25 Verify combined test coverage (50 vectors total: 39 AES + 11 SM4)
+- [x] 11.7 Test with various input sizes and radices
+- [x] 11.8 Verify thread safety with concurrent operations
+- [x] 11.9 Add tests for all error conditions
+- [x] 11.10 Add tests for boundary conditions (minimum/maximum radix)
+- [x] 11.11 Add tests for all NIST test vectors (hardcoded in tests/vectors.h)
+- [x] 11.12 Verify no Python dependencies in test suite
+- [x] 11.13 Implement test runner that loads tests/vectors.h and runs all tests
+- [x] 11.14 Create performance benchmark suite with TPS reporting
+- [x] 11.15 Add multi-threaded performance tests (1/2/4/8/16/32 threads)
+- [x] 11.16 Measure and report TPS for each algorithm (FF1/FF3/FF3-1) with AES
+- [x] 11.17 Measure and report TPS for each algorithm (FF1/FF3/FF3-1) with SM4
+- [x] 11.18 Compare TPS between FF1, FF3, FF3-1 (same cipher, same parameters)
+- [x] 11.19 Compare TPS between AES and SM4 (same algorithm, same parameters)
+- [x] 11.20 Test TPS scaling with different input lengths (10/16/20/100 digits)
+- [x] 11.21 Verify TPS scales linearly until CPU saturation point
+- [x] 11.22 Document CPU core count vs optimal thread count for TPS
+- [x] 11.23 Verify all AES test vectors from tests/vectors.h (39 vectors)
+- [x] 11.24 Verify all SM4 test vectors from tests/vectors.h (11 vectors)
+- [x] 11.25 Verify combined test coverage (50 vectors total: 39 AES + 11 SM4)
 
 ## 12. Documentation
 
@@ -244,16 +244,16 @@
 - [x] 12.4 Document FF3 algorithm implementation details (with deprecation notice)
 - [x] 12.5 Document FF3-1 algorithm implementation details
 - [x] 12.6 Document SM4 support and version requirements
-- [ ] 12.7 Add architecture and design documentation
+- [x] 12.7 Add architecture and design documentation
 - [x] 12.8 Document security considerations and best practices
 - [x] 12.9 Document performance characteristics
 - [x] 12.10 Document thread safety guarantees
 - [x] 12.11 Document error handling and return values
-- [ ] 12.12 Add examples for unified API usage
-- [ ] 12.13 Add examples for one-shot API usage
-- [ ] 12.14 Add examples for string API usage
+- [x] 12.12 Add examples for unified API usage
+- [x] 12.13 Add examples for one-shot API usage
+- [x] 12.14 Add examples for string API usage
 - [x] 12.15 Add migration guide from FF3 to FF3-1
-- [ ] 12.16 Document tests/vectors.h format and usage
+- [x] 12.16 Document tests/vectors.h format and usage
 - [x] 12.17 Document performance baseline expectations (encryption/decryption time)
 - [x] 12.18 Document TPS (Transactions Per Second) measurement methodology
 - [x] 12.19 Document performance characteristics of FF1, FF3, FF3-1
@@ -285,24 +285,24 @@
 
 ## 14. Final Validation
 
-- [ ] 14.1 Run all unit tests and verify 100% pass rate
-- [ ] 14.2 Verify all NIST test vectors pass (all 39 AES vectors from tests/vectors.h)
-- [ ] 14.3 Verify all SM4 test vectors pass (all 11 SM4 vectors from tests/vectors.h)
-- [ ] 14.4 Build and test on Linux
+- [x] 14.1 Run all unit tests and verify 100% pass rate
+- [x] 14.2 Verify all NIST test vectors pass (all 39 AES vectors from tests/vectors.h)
+- [x] 14.3 Verify all SM4 test vectors pass (all 11 SM4 vectors from tests/vectors.h)
+- [x] 14.4 Build and test on Linux
 - [ ] 14.5 Build and test on macOS
 - [ ] 14.6 Build and test on Windows (if applicable)
 - [ ] 14.7 Run code static analysis (clang-tidy/cppcheck)
 - [ ] 14.8 Check for memory leaks with Valgrind
-- [ ] 14.9 Verify documentation is complete and accurate
+- [x] 14.9 Verify documentation is complete and accurate
 - [ ] 14.10 Final code review and cleanup
 - [ ] 14.11 Verify ABI stability (opaque pointer encapsulation)
-- [ ] 14.12 Verify C++ compatibility (extern "C" linkage)
+- [x] 14.12 Verify C++ compatibility (extern "C" linkage)
 - [ ] 14.13 Test with OpenSSL 1.1.1 (experimental SM4)
 - [ ] 14.14 Test with OpenSSL 3.0+ (full SM4 support)
 - [ ] 14.15 Test with OpenSSL < 1.1.1 (no SM4, verify error handling)
-- [ ] 14.16 Run performance benchmarks and verify results are reasonable
-- [ ] 14.17 Verify TPS measurements are accurate and reproducible
-- [ ] 14.18 Verify thread safety in multi-threaded performance tests
-- [ ] 14.19 Verify performance targets are met (document baseline expectations)
-- [ ] 14.20 Document final performance characteristics (AES vs SM4, FF1 vs FF3 vs FF3-1)
-- [ ] 14.21 Verify all 50+ test vectors pass (AES + SM4 combined)
+- [x] 14.16 Run performance benchmarks and verify results are reasonable
+- [x] 14.17 Verify TPS measurements are accurate and reproducible
+- [x] 14.18 Verify thread safety in multi-threaded performance tests
+- [x] 14.19 Verify performance targets are met (document baseline expectations)
+- [x] 14.20 Document final performance characteristics (AES vs SM4, FF1 vs FF3 vs FF3-1)
+- [x] 14.21 Verify all 50+ test vectors pass (AES + SM4 combined)
