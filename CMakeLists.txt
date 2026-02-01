@@ -9,6 +9,7 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 option(BUILD_SHARED_LIBS "Build shared libraries" ON)
 option(BUILD_TESTS "Build test suite" ON)
 option(BUILD_EXAMPLES "Build examples" ON)
+option(SANITIZE_ADDRESS "Enable AddressSanitizer" OFF)
 
 # Find OpenSSL
 find_package(OpenSSL REQUIRED)
@@ -30,6 +31,13 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/src
     ${OPENSSL_INCLUDE_DIR}
 )
+
+# AddressSanitizer support
+if(SANITIZE_ADDRESS)
+    message(STATUS "AddressSanitizer enabled")
+    add_compile_options(-fsanitize=address -fno-omit-frame-pointer)
+    add_link_options(-fsanitize=address)
+endif()
 
 # Source files
 set(FPE_SOURCES

@@ -150,8 +150,8 @@
 - [x] 7.6 Add unit tests for SM4 key derivation
 - [x] 7.7 Add unit tests for SM4 round functions
 - [x] 7.8 Test with OpenSSL 3.0+ (full SM4 support)
-- [ ] 7.9 Test with OpenSSL 1.1.1+ (experimental SM4 support)
-- [ ] 7.10 Test error handling when SM4 unavailable
+- [x] 7.9 Test with OpenSSL 1.1.1+ (experimental SM4 support)
+- [x] 7.10 Test error handling when SM4 unavailable
 - [x] 7.11 Add documentation about SM4 version requirements
 - [x] 7.12 Verify all FF1 SM4 test vectors from tests/vectors.h (3 vectors passing)
 - [x] 7.13 Verify all FF3 SM4 test vectors from tests/vectors.h (1/2 vectors passing)
@@ -204,7 +204,7 @@
 - [x] 10.5 Create Makefile wrapper for convenience
 - [x] 10.6 Add CI/CD configuration (GitHub Actions or similar)
 - [x] 10.7 Test build on Linux
-- [ ] 10.8 Test build on macOS
+- [x] 10.8 Test build on macOS
 - [ ] 10.9 Test build on Windows (if applicable)
 - [x] 10.10 Test build with multiple OpenSSL versions (1.1.1, 3.0)
 
@@ -213,9 +213,9 @@
 - [x] 11.1 Add integration tests for full encryption/decryption cycles
 - [x] 11.2 Add performance benchmarks for FF1, FF3, FF3-1
 - [x] 11.3 Add performance benchmarks comparing AES vs SM4
-- [ ] 11.4 Add fuzzing tests for input validation
-- [ ] 11.5 Add memory leak detection (Valgrind/AddressSanitizer)
-- [ ] 11.6 Add property-based tests for reversibility
+- [x] 11.4 Add fuzzing tests for input validation
+- [x] 11.5 Add memory leak detection (Valgrind/AddressSanitizer)
+- [x] 11.6 Add property-based tests for reversibility
 - [x] 11.7 Test with various input sizes and radices
 - [x] 11.8 Verify thread safety with concurrent operations
 - [x] 11.9 Add tests for all error conditions
@@ -289,17 +289,17 @@
 - [x] 14.2 Verify all NIST test vectors pass (all 39 AES vectors from tests/vectors.h)
 - [x] 14.3 Verify all SM4 test vectors pass (all 11 SM4 vectors from tests/vectors.h)
 - [x] 14.4 Build and test on Linux
-- [ ] 14.5 Build and test on macOS
+- [x] 14.5 Build and test on macOS
 - [ ] 14.6 Build and test on Windows (if applicable)
-- [ ] 14.7 Run code static analysis (clang-tidy/cppcheck)
-- [ ] 14.8 Check for memory leaks with Valgrind
+- [x] 14.7 Run code static analysis (clang-tidy/cppcheck) - Documented in docs/CODE_REVIEW.md
+- [x] 14.8 Check for memory leaks with Valgrind
 - [x] 14.9 Verify documentation is complete and accurate
-- [ ] 14.10 Final code review and cleanup
-- [ ] 14.11 Verify ABI stability (opaque pointer encapsulation)
+- [x] 14.10 Final code review and cleanup - Complete, see docs/CODE_REVIEW.md
+- [x] 14.11 Verify ABI stability (opaque pointer encapsulation)
 - [x] 14.12 Verify C++ compatibility (extern "C" linkage)
-- [ ] 14.13 Test with OpenSSL 1.1.1 (experimental SM4)
-- [ ] 14.14 Test with OpenSSL 3.0+ (full SM4 support)
-- [ ] 14.15 Test with OpenSSL < 1.1.1 (no SM4, verify error handling)
+- [x] 14.13 Test with OpenSSL 1.1.1 (experimental SM4)
+- [x] 14.14 Test with OpenSSL 3.0+ (full SM4 support)
+- [x] 14.15 Test with OpenSSL < 1.1.1 (no SM4, verify error handling)
 - [x] 14.16 Run performance benchmarks and verify results are reasonable
 - [x] 14.17 Verify TPS measurements are accurate and reproducible
 - [x] 14.18 Verify thread safety in multi-threaded performance tests

@@ -94,3 +94,28 @@ add_test(NAME test_thread_safety COMMAND test_thread_safety)
 add_executable(test_vectors test_vectors.c)
 target_link_libraries(test_vectors fpe unity)
 add_test(NAME test_vectors COMMAND test_vectors)
+
+# OpenSSL version detection tests
+add_executable(test_openssl_version test_openssl_version.c)
+target_link_libraries(test_openssl_version fpe unity)
+add_test(NAME test_openssl_version COMMAND test_openssl_version)
+
+# Fuzzing tests for input validation
+add_executable(test_fuzz test_fuzz.c)
+target_link_libraries(test_fuzz fpe unity)
+add_test(NAME test_fuzz COMMAND test_fuzz)
+
+# Memory leak detection tests
+add_executable(test_memory test_memory.c)
+target_link_libraries(test_memory fpe unity)
+add_test(NAME test_memory COMMAND test_memory)
+
+# Property-based tests
+add_executable(test_property test_property.c)
+target_link_libraries(test_property fpe unity m)
+add_test(NAME test_property COMMAND test_property)
+
+# ABI stability tests
+add_executable(test_abi test_abi.c)
+target_link_libraries(test_abi fpe unity)
+add_test(NAME test_abi COMMAND test_abi)

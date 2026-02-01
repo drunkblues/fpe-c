@@ -55,7 +55,13 @@ release:
 # Run memory leak check with valgrind (requires valgrind)
 memcheck: debug
 	@cd $(BUILD_DIR) && valgrind --leak-check=full --show-leak-kinds=all \
-		--track-origins=yes ./tests/test_basic
+		--track-origins=yes ./tests/test_memory
+
+# Run memory leak check with AddressSanitizer
+memcheck-asan:
+	@mkdir -p $(BUILD_DIR)
+	@cd $(BUILD_DIR) && cmake -DSANITIZE_ADDRESS=ON .. && $(MAKE)
+	@cd $(BUILD_DIR) && ./tests/test_memory
 
 # Format code with clang-format (requires clang-format)
 format:
@@ -83,6 +89,7 @@ help:
 	@echo ""
 	@echo "Testing and validation:"
 	@echo "  make memcheck     - Run memory leak check (requires valgrind)"
+	@echo "  make memcheck-asan - Run memory leak check with AddressSanitizer"
 	@echo "  make format       - Format code (requires clang-format)"
 	@echo ""
 	@echo "Configuration:"
