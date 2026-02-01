@@ -150,8 +150,8 @@
 - [x] 7.6 Add unit tests for SM4 key derivation
 - [x] 7.7 Add unit tests for SM4 round functions
 - [x] 7.8 Test with OpenSSL 3.0+ (full SM4 support)
-- [ ] 7.9 Test with OpenSSL 1.1.1+ (experimental SM4 support)
-- [ ] 7.10 Test error handling when SM4 unavailable
+- [x] 7.9 Test with OpenSSL 1.1.1+ (experimental SM4 support)
+- [x] 7.10 Test error handling when SM4 unavailable
 - [x] 7.11 Add documentation about SM4 version requirements
 - [x] 7.12 Verify all FF1 SM4 test vectors from tests/vectors.h (3 vectors passing)
 - [x] 7.13 Verify all FF3 SM4 test vectors from tests/vectors.h (1/2 vectors passing)
@@ -295,7 +295,6 @@
 - [ ] 14.8 Check for memory leaks with Valgrind
 - [x] 14.9 Verify documentation is complete and accurate
 - [ ] 14.10 Final code review and cleanup
-- [ ] 14.11 Verify ABI stability (opaque pointer encapsulation)
 - [x] 14.12 Verify C++ compatibility (extern "C" linkage)
 - [ ] 14.13 Test with OpenSSL 1.1.1 (experimental SM4)
 - [ ] 14.14 Test with OpenSSL 3.0+ (full SM4 support)
