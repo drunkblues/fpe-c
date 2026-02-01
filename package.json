@@ -1,0 +1,49 @@
+{
+  "name": "fpe-c",
+  "version": "1.0.0",
+  "description": "High-performance Format-Preserving Encryption (FPE) library implementing NIST SP 800-38G standards (FF1, FF3, FF3-1) with AES and SM4 cipher support",
+  "keywords": [
+    "fpe",
+    "format-preserving-encryption",
+    "ff1",
+    "ff3",
+    "ff3-1",
+    "aes",
+    "sm4",
+    "encryption",
+    "cryptography",
+    "nist",
+    "sp800-38g"
+  ],
+  "homepage": "https://github.com/yourusername/fpe-c",
+  "bugs": {
+    "url": "https://github.com/yourusername/fpe-c/issues"
+  },
+  "license": "MIT",
+  "author": "FPE-C Contributors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/fpe-c.git"
+  },
+  "scripts": {
+    "build": "mkdir -p build && cd build && cmake .. && make",
+    "test": "cd build && make test",
+    "clean": "rm -rf build",
+    "install": "cd build && sudo make install"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "os": [
+    "linux",
+    "darwin",
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "arm64",
+    "ia32"
+  ],
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}
