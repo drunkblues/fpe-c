@@ -1,0 +1,11 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: fpe-c
+Description: Format-Preserving Encryption Library (FF1/FF3/FF3-1 with AES/SM4)
+Version: @PROJECT_VERSION@
+Libs: -L${libdir} -lfpe
+Cflags: -I${includedir}
+Requires: openssl

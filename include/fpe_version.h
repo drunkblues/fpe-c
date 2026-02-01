@@ -1,0 +1,10 @@
+#ifndef FPE_VERSION_H
+#define FPE_VERSION_H
+
+#define FPE_VERSION_MAJOR 1
+#define FPE_VERSION_MINOR 0
+#define FPE_VERSION_PATCH 0
+
+#define FPE_VERSION_STRING "1.0.0"
+
+#endif /* FPE_VERSION_H */
