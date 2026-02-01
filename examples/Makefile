@@ -26,7 +26,7 @@ else
 endif
 
 # Example targets
-EXAMPLES = basic oneshot credit_card custom_alphabet sm4 inplace compare errors ff3-1 threads benchmark benchmark_mt aes_vs_sm4 test_vectors_example
+EXAMPLES = basic oneshot credit_card custom_alphabet sm4 inplace compare errors ff3-1 threads benchmark benchmark_mt aes_vs_sm4
 
 all: $(EXAMPLES)
 
@@ -64,8 +64,11 @@ threads: threads.c
 benchmark: benchmark.c
 	$(CC) $(CFLAGS) $< $(LDFLAGS) -o $@
 
-benchmark_mt aes_vs_sm4 test_vectors_example: benchmark_mt.c
-	$(CC) $(CFLAGS) -pthread $< $(LDFLAGS) -o $@
+benchmark_mt: benchmark_mt.c
+	$(CC) $(CFLAGS) -pthread -I../tests $< ../tests/pthread_barrier_compat.c $(LDFLAGS) -o $@
+
+aes_vs_sm4: aes_vs_sm4.c
+	$(CC) $(CFLAGS) -pthread -I../tests $< ../tests/pthread_barrier_compat.c $(LDFLAGS) -o $@
 
 # Clean up
 clean:
@@ -73,8 +76,3 @@ clean:
 	@echo "✓ Cleaned examples"
 
 .PHONY: all run clean
-aes_vs_sm4 test_vectors_example: aes_vs_sm4.c
-	$(CC) $(CFLAGS) $< $(LDFLAGS) -o $@
-
-test_vectors_example: test_vectors_example.c
-	$(CC) $(CFLAGS) $< $(LDFLAGS) -o $@

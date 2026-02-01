@@ -26,6 +26,10 @@
 #include <time.h>
 #include "fpe.h"
 
+#ifdef __APPLE__
+#include "pthread_barrier_compat.h"
+#endif
+
 /* ============================================================================
  * Thread Benchmark Infrastructure
  * ============================================================================
