@@ -135,7 +135,7 @@ int FPE_CTX_init(FPE_CTX *ctx, FPE_MODE mode, FPE_ALGO algo,
 | **Invalid mode** | mode not FPE_MODE_FF1/FF3/FF3_1 |
 | **Invalid algorithm** | algo not FPE_ALGO_AES/SM4 |
 | **Invalid key size** | bits not 128/192/256 (AES) or 128 (SM4) |
-| **Invalid radix** | radix < 2 or > 65536 (FF1), > 256 (FF3/FF3-1) |
+| **Invalid radix** | radix < 2 or > 65536 (all modes: FF1, FF3, FF3-1) |
 | **SM4 unavailable** | SM4 requested but OpenSSL doesn't support it |
 | **OpenSSL error** | Cipher initialization failed |
 
@@ -494,7 +494,7 @@ int encrypt_with_error_info(const char *input, char *output, FPEErrorInfo *err) 
 
 **Common causes:**
 1. Invalid key size (not 128/192/256 for AES, or not 128 for SM4)
-2. Invalid radix (< 2 or > 65536 for FF1, > 256 for FF3/FF3-1)
+2. Invalid radix (< 2 or > 65536 for all modes: FF1, FF3, FF3-1)
 3. SM4 not available in OpenSSL
 4. NULL key or context
 
@@ -506,7 +506,7 @@ if (key_bits != 128 && key_bits != 192 && key_bits != 256) {
 }
 
 // Check radix
-if (radix < 2 || (mode != FPE_MODE_FF1 && radix > 256)) {
+if (radix < 2 || radix > 65536) {
     fprintf(stderr, "Invalid radix: %u\n", radix);
 }
 

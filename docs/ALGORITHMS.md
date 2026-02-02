@@ -90,13 +90,12 @@ FF3 is an earlier Feistel-based FPE method. It has known security vulnerabilitie
 FF3 has several security issues identified in academic research:
 1. **Weak domain separation** - Different domains can have related outputs
 2. **Tweak-related attacks** - Certain tweak patterns can leak information
-3. **Limited radix range** - Only supports radix ≤ 256 due to design constraints
 
 **Recommendation:** Use FF3-1 for all new applications. FF3 is only included for backward compatibility with legacy systems.
 
 ### Key Features
 
-- **Radix Support:** 2 ≤ radix ≤ 256 (limited)
+ - **Radix Support:** 2 ≤ radix ≤ 65536
 - **Minimum Length:** 4 symbols (must be even)
 - **Maximum Length:** 56 symbols
 - **Tweak Length:** Exactly 8 bytes (64 bits)
@@ -162,9 +161,9 @@ FF3-1 is the revised version of FF3 with security fixes. It addresses the vulner
 
 ### Key Features
 
-- **Radix Support:** 2 ≤ radix ≤ 256
-- **Minimum Length:** 4 symbols (must be even)
-- **Maximum Length:** 56 symbols
+ - **Radix Support:** 2 ≤ radix ≤ 65536
+ - **Minimum Length:** 4 symbols (must be even)
+ - **Maximum Length:** 56 symbols
 - **Tweak Length:** Exactly 7 bytes (56 bits) - **NOTE: Different from FF3!**
 - **Rounds:** 8 Feistel rounds
 
@@ -342,15 +341,13 @@ All functions return integer error codes:
 ### Algorithm Selection Guide
 
 **Use FF1 when:**
-- You need flexible radix support (radix > 256)
-- You need variable-length tweaks
-- You want maximum flexibility
-- **This is the recommended default**
+ - You need variable-length tweaks
+ - You want maximum flexibility
+ - **This is the recommended default**
 
 **Use FF3-1 when:**
-- You need compatibility with FF3-based systems (with security fixes)
-- You're constrained to radix ≤ 256
-- You have fixed 7-byte tweaks
+ - You need compatibility with FF3-based systems (with security fixes)
+ - You have fixed 7-byte tweaks
 
 **Avoid FF3 unless:**
 - You absolutely must maintain compatibility with legacy FF3 systems

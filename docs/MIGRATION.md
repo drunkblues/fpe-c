@@ -22,8 +22,7 @@ This guide provides comprehensive instructions for migrating from the deprecated
 FF3 has several known security vulnerabilities identified in academic research:
 
 1. **Weak Domain Separation** - Different domains can have related outputs, allowing potential pattern analysis
-2. **Tweak-Related Attacks** - Certain tweak patterns can leak information about the plaintext
-3. **Limited Radix Support** - Only supports radix ≤ 256 due to design constraints
+2. **Tweak-Related Attacks** - Certain tweak patterns can leak information about plaintext
 
 ### NIST Deprecation
 

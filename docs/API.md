@@ -74,7 +74,7 @@ Initializes an FPE context with specified parameters.
 - `algo` - Cipher algorithm (FPE_ALGO_AES, FPE_ALGO_SM4)
 - `key` - Encryption key (16, 24, or 32 bytes for AES; 16 bytes for SM4)
 - `key_bits` - Key length in bits (128, 192, or 256 for AES; 128 for SM4)
-- `radix` - Radix (2-65536 for FF1; 2-256 for FF3/FF3-1)
+ - `radix` - Radix (2-65536 for all modes: FF1, FF3, FF3-1)
 
 **Returns:**
 - 0 on success
@@ -92,10 +92,9 @@ if (ret != 0) {
 ```
 
 **Constraints:**
-- FF1: radix must be in [2, 65536]
-- FF3/FF3-1: radix must be in [2, 256]
-- Key size must match key_bits parameter
-- SM4 only supports 128-bit keys
+ - All modes (FF1, FF3, FF3-1): radix must be in [2, 65536]
+ - Key size must match key_bits parameter
+ - SM4 only supports 128-bit keys
 
 ---
 
@@ -376,9 +375,9 @@ typedef enum {
 ```
 
 **Recommendations:**
-- **FF1**: Best for most use cases. Supports wide range of radix (2-65536) and input lengths (≥2).
-- **FF3-1**: Use when FF3 compatibility is required but with security fixes. Limited to radix ≤256.
-- **FF3**: Deprecated. Only use for legacy compatibility.
+ - **FF1**: Best for most use cases. Supports wide range of radix (2-65536) and input lengths (≥2).
+ - **FF3-1**: Use when FF3 compatibility is required but with security fixes. Supports radix (2-65536).
+ - **FF3**: Deprecated. Only use for legacy compatibility.
 
 ---
 

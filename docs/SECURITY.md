@@ -116,7 +116,6 @@ typedef struct {
 FF3 has known security vulnerabilities:
 1. **Weak domain separation** - Different domains can leak information
 2. **Tweak-related attacks** - Certain tweak patterns compromise security
-3. **Limited radix support** - Only supports radix ≤ 256
 
 **Migration Path:** Use FF3-1 for backward compatibility, or migrate to FF1 for new systems.
 
